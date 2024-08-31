@@ -433,11 +433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CRIS\\Desktop\\CRIS II\\9no\\1 SERVICIOS WEB\\DatingApp\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\CRIS\\Desktop\\CRIS II\\9no\\1 SERVICIOS WEB\\DatingApp\\DatingApp2\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\CRIS\\Desktop\\CRIS II\\9no\\1 SERVICIOS WEB\\DatingApp\\API\\API.csproj",
+      "projectPath": "C:\\Users\\CRIS\\Desktop\\CRIS II\\9no\\1 SERVICIOS WEB\\DatingApp\\DatingApp2\\API\\API.csproj",
       "packagesPath": "C:\\Users\\CRIS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CRIS\\Desktop\\CRIS II\\9no\\1 SERVICIOS WEB\\DatingApp\\API\\obj\\",
+      "outputPath": "C:\\Users\\CRIS\\Desktop\\CRIS II\\9no\\1 SERVICIOS WEB\\DatingApp\\DatingApp2\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CRIS\\AppData\\Roaming\\NuGet\\NuGet.Config"
