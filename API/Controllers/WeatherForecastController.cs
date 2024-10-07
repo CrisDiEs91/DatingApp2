@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
+
+
 public class WeatherForecastController : BaseApiController
 {
     private static readonly string[] Summaries = new[]
