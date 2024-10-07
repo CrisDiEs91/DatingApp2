@@ -4,7 +4,10 @@ namespace API.Services;
 
 public interface ITokenService
 {
-    string CreateToken(AppUser user);    
+    string CreateToken(AppUser user);   
+    {
+        throw new NotImplementedException();
+    } 
 }
 
 
