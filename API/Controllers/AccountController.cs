@@ -1,3 +1,4 @@
+namespace API.Controllers;
 using System.Security.Cryptography;
 using System.Text;
 using API.Data;
@@ -6,8 +7,6 @@ using API.Entities;
 using API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
-namespace API.Controllers;
 
 public class AccountController(
     DataContext context,
@@ -46,16 +45,21 @@ public class AccountController(
             x.UserName.ToLower() == request.Username.ToLower());
 
         if (user == null)
+        {
             return Unauthorized("Invalid username or password");
-        
+        }
 
         using var hmac = new HMACSHA512(user.PasswordSalt);
         var computeHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(request.Password));
 
-        for (int i = 0; i < computeHash.Length; i++)
+        for (var i = 0; i < computeHash.Length; i++)
+        {
             if (computeHash[i] != user.PasswordHash[i])
+            {
                 return Unauthorized("Invalid username or password");
-                
+            }
+        }
+
         return new UserResponse
         {
             Username = user.UserName,
