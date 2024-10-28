@@ -2,6 +2,7 @@ namespace API.Controllers;
 using API.Data;
 using API.Data.Migrations;
 using API.DTOs;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
