@@ -1,7 +1,7 @@
 namespace API.Data.Migrations;
 
 using API.DTOs;
-using API.Entities;
+using API.DataEntities;
 
 public interface IUserRepository
 {

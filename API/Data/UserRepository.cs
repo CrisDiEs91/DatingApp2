@@ -2,7 +2,7 @@ namespace API.Data;
 
 using API.Data.Migrations;
 using API.DTOs;
-using API.Entities;
+using API.DataEntities;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;

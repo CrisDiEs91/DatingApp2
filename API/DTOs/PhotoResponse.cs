@@ -1,5 +1,4 @@
 namespace API.DTOs;
-
 public class PhotoResponse
 {
     public int Id { get; set; }
