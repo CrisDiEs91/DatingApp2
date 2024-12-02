@@ -18,16 +18,15 @@ public class BuggyControllerTests
     {
         _client = TestHelper.Instance.Client;
     }
-    [Theory]
-    [InlineData("OK", "arenita", "123456")]
-    public async Task GetSecretShouldOK(string statusCode, string username, string password)
+    [Fact]
+    public async Task GetSecretShouldOK()
     {
         // Arrange
         requestUrl = "api/account/login";
         var loginRequest = new LoginRequest
         {
-            Username = username,
-            Password = password
+            Username = "arenita",
+            Password = "123456"
         };
         loginObject = GetLoginObject(loginRequest);
         httpContent = GetHttpContent(loginObject);
@@ -39,8 +38,8 @@ public class BuggyControllerTests
         // Act
         httpResponse = await _client.GetAsync(requestUrl);
         // Assert
-        Assert.Equal(Enum.Parse<HttpStatusCode>(statusCode, true), httpResponse.StatusCode);
-        Assert.Equal(statusCode, httpResponse.StatusCode.ToString());
+        Assert.Equal(Enum.Parse<HttpStatusCode>(expectedStatusCode, true), httpResponse.StatusCode);
+        Assert.Equal(expectedStatusCode, httpResponse.StatusCode.ToString());
     }
     [Theory]
     [InlineData("NotFound")]

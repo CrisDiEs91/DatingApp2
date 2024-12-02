@@ -2,6 +2,7 @@
 
 namespace API.Data.Migrations
 {
+    using System.Diagnostics.CodeAnalysis;
     using Microsoft.EntityFrameworkCore.Migrations;
 
     /// <inheritdoc />
@@ -18,6 +19,7 @@ namespace API.Data.Migrations
                 },
                 constraints: table => table.PrimaryKey("PK_Users", x => x.Id));
 
+        [ExcludeFromCodeCoverage]
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder) => migrationBuilder.DropTable(
                 name: "Users");
