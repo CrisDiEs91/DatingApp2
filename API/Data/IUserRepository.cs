@@ -1,4 +1,4 @@
-namespace API.Data.Migrations;
+namespace API.Data;
 
 using API.DTOs;
 using API.DataEntities;

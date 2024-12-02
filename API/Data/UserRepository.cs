@@ -33,8 +33,6 @@ public class UserRepository(DataContext context, IMapper mapper) : IUserReposito
         => await context.Users
                 .ProjectTo<MemberResponse>(mapper.ConfigurationProvider)
                 .ToListAsync();
-    public async Task<bool> SaveAllAsync()
-        => await context.SaveChangesAsync() > 0;
 
     public void Update(AppUser user)
         => context.Entry(user).State = EntityState.Modified;
